@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    outline: none;
+    border:none
+}
+
+body {
+    width:100vw;
+    height: 100vh;
+    background: rgb(200, 225, 255);
+ /*background: linear-gradient(45deg, rgba(193,124,0,1) 0%, rgba(108,9,121,1) 49%, rgba(0,212,255,1) 100%);
+ */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding-bottom: 50px;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+    align-self: center;
+    background-color: #FFF;
+    border-radius: 70px;
+    box-shadow: 0 0 15px 2px rgba(0,0,0,0.15);
+}
+
+.input-search {
+    background-color: transparent;
+    padding: 30px;
+    font-family: "Helvetica Neue", serif;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+}
+
+.search-button {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    align-self: center;
+    background-color: #006ada;
+    color:#fff;
+    font-size: 25px;
+    font-family: "Helvetica Neue", serif;
+}
+.search-button:hover {
+    box-shadow: 0 0 0 3px white,
+                0 0 0 6px #006ada;
+    transition: 0.3s;
+}
+.search-button:active {
+    background-color: white;
+    color: #006ada;
+
+    transition: 0.3s;
+}
+.transaction {
+    width:70vw;
+    align-self: center;
+    border: none;
+    background-color: #fff;
+    font-family: "Helvetica Neue", serif;
+    margin-bottom: 20px;
+    border-spacing: 0;
+    border-radius: 20px;
+
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+.transaction th {
+    font-weight: bold;
+    line-height: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: #006ada;
+}
+.transaction td {
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 50px;
+}
+.transaction td:nth-child(1){
+    text-align: center;
+}
+.transaction td:nth-child(2){
+    text-align: right;
+}
+.transaction td:nth-child(3){
+    text-align: left;
+}
+
+
+.transaction tr:last-child td:first-child {
+    border-radius: 0 0 0 20px;
+}
+.transaction tr:last-child td:last-child {
+    border-radius: 0 0 20px 0;
+}
+.transaction th:first-child {
+    border-radius: 20px 0 0 20px;
+}
+.transaction th:last-child {
+    border-radius: 0 20px 20px 0;
+}
+.transaction tr:nth-child(even) {
+    background: #FFFFFF;
+}
+.transaction tr:nth-child(odd) {
+    background: #F2F2F2;
+}
+
+p {
+    align-self: center;
+}
+
+.redirect-to-upload {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+
+.upload-button {
+    align-self: center;
+    background-color: #006ada;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: white;
+    font-family: "Helvetica Neue",sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    box-sizing: border-box;
+
+
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.15),
+                0 0 0px 10px white;
+}
+
+.upload-button:hover {
+    box-shadow: 0 0 0 3px white,
+                0 0 0 5px #006ada,
+                0 0 0px 10px white;
+
+    transition: 0.3s;
+}
+
+.upload-button:active {
+    background-color: white;
+    color: #006ada;
+
+    transition: 0.3s;
+}
+
+

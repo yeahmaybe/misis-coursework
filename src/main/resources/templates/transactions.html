@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/main.css}"/>
+    <title>Search transaction</title>
+</head>
+<body>
+    <div class = "wrapper">
+        <form class="redirect-to-upload" action="/upload/">
+            <input type="submit" value="&uarr;" class="upload-button" />
+        </form>
+        <div class = "main">
+            <form class="input-form" method="get" action="/transactions">
+                <div class="input-wrapper">
+                    <input type="text" name="search" class="input-search" th:value="${search}" placeholder="Введите текст" >
+                    <input type="submit" value="Поиск" class="search-button" />
+                </div>
+            </form>
+        </div>
+        <table class = "transaction">
+            <tr>
+                <th>Название</th>
+                <th>Сумма</th>
+                <th>Описание</th>
+            </tr>
+            <tr th:each = "transaction : ${transactions}">
+                <td th:text="${transaction.name}"></td>
+                <td th:text="${transaction.moneyAmount}"></td>
+                <td th:text="${transaction.description}"></td>
+
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

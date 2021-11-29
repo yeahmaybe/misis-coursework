@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/upload.css}"/>
+    <title>Upload DB</title>
+</head>
+<body>
+<div class="wrapper">
+    <form class="redirect-to-upload" action="/transactions/">
+        <input type="submit" value="&larr;" class="upload-button" />
+    </form>
+    <div class="upload-form">
+        <p class = "uploadMessage" th:if="${fileName} != null and ${fileName} != ''" th:text = "Файл+' '+${fileName}+' '+успешно+' '+загружен"></p>
+        <p class = "uploadMessage" th:if="${fileName} == null or ${fileName} == ''" th:text = "Выберите+' '+файл">d</p>
+        <form class="file-form" method="POST" enctype="multipart/form-data">
+            <div class="file-input-wrapper">
+                <p class="file-input">Загрузка файла базы данных</p>
+                <input class="file-input" type="file" name="file">
+            </div>
+            <input class="file-button" type="submit" value="&uarr;">
+        </form>
+    </div>
+</div>
+</body>
+</html>
