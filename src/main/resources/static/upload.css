@@ -24,6 +24,13 @@ body {
     margin-top: 150px;
 }
 
+.file-input-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 15px;
+}
+
 .file-form {
     align-self: center;
     display: flex;
@@ -32,24 +39,48 @@ body {
     align-content: center;
 
     background-color: white;
-    border-radius: 50px;
+    border-radius: 500px;
     padding:10px 30px;
 
     margin-top: 20px;
     box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
 }
 
-.file-input {
-    align-self: center;
-    font-family:  "Helvetica Neue", serif;
-    font-size: 15px;
+.upload-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.type-panel {
+    font-size: 17px;
+    font-family:  "Helvetica Neue", serif;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom:10px;
+}
+.type-panel input {
+    margin-left: 10px;
+}
+.custom-file {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 p.file-input {
-    margin: 0 20px 15px 0;
-    font-size: 30px;
+    margin-bottom: 20px;
     font-weight: bold;
     cursor: default;
+    align-self: center;
+    font-family:  "Helvetica Neue", serif;
+    font-size: 30px;
+}
+
+
+input.file-input {
+    position: relative;
+    align-self: center;
+    font-size: 17px;
 }
 
 .file-form:hover {
@@ -58,13 +89,13 @@ p.file-input {
 }
 .file-button {
     align-self: center;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: #006ada;
     color:#fff;
     font-family: "Helvetica Neue", serif;;
-    font-size: 30px;
+    font-size: 35px;
     line-height: 53px;
     font-weight: bold;
 

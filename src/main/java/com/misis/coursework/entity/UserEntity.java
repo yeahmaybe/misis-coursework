@@ -9,19 +9,11 @@ import java.util.List;
 @Entity
 public class UserEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    @Getter
-    @Setter
+    @Getter @Setter
     private Long id;
 
-    @Getter
-    @Setter
-    private String username;
-
-    @Getter
-    @Setter
-    private String password;
+    @Getter @Setter
+    private int gender;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     List<TransactionEntity> transactions;

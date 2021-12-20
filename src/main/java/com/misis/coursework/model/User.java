@@ -12,12 +12,12 @@ public class User {
     private Long id;
 
     @Getter @Setter
-    private String username;
+    private int gender;
 
     public static User toModel(UserEntity entity) {
         User model = new User();
         model.setId(entity.getId());
-        model.setUsername(entity.getUsername());
+        model.setGender(entity.getGender());
         return model;
     }
 }
