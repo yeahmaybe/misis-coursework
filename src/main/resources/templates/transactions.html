@@ -20,15 +20,16 @@
         </div>
         <table class = "transaction">
             <tr>
-                <th>Название</th>
-                <th>Сумма</th>
+                <th>Дата</th>
                 <th>Описание</th>
+                <th>Категория</th>
+                <th>Сумма</th>
             </tr>
             <tr th:each = "transaction : ${transactions}">
-                <td th:text="${transaction.name}"></td>
-                <td th:text="${transaction.moneyAmount}"></td>
+                <td th:text="${transaction.date}"></td>
                 <td th:text="${transaction.description}"></td>
-
+                <td th:text="${transaction.mcc}"></td>
+                <td th:text="${transaction.moneyAmount}"></td>
             </tr>
         </table>
     </div>

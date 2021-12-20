@@ -14,9 +14,30 @@
         <p class = "uploadMessage" th:if="${fileName} != null and ${fileName} != ''" th:text = "Файл+' '+${fileName}+' '+успешно+' '+загружен"></p>
         <p class = "uploadMessage" th:if="${fileName} == null or ${fileName} == ''" th:text = "Выберите+' '+файл">d</p>
         <form class="file-form" method="POST" enctype="multipart/form-data">
-            <div class="file-input-wrapper">
-                <p class="file-input">Загрузка файла базы данных</p>
-                <input class="file-input" type="file" name="file">
+            <div class="upload-panel">
+                <div class="file-input-wrapper">
+                    <p class="file-input">Загрузка файла базы данных</p>
+                    <div class="custom-file">
+                        <input class="file-input" accept="text/csv" type="file" name="file">
+                    </div>
+                </div>
+                <div class="type-panel">
+                    <input type="radio" id="type1"
+                           name="type" value="transaction">
+                    <label for="type1">Транзакции</label>
+
+                    <input type="radio" id="type2"
+                           name="type" value="mcc">
+                    <label for="type2">MCC-коды</label>
+
+                    <input type="radio" id="type3"
+                           name="type" value="type">
+                    <label for="type3">Библиотека типов</label>
+
+                    <input type="radio" id="type4"
+                           name="type" value="user">
+                    <label for="type3">База пользователей</label>
+                </div>
             </div>
             <input class="file-button" type="submit" value="&uarr;">
         </form>

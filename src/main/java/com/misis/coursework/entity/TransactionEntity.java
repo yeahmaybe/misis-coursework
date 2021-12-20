@@ -17,17 +17,27 @@ public class TransactionEntity {
     private Long id;
 
     @Getter @Setter
-    private String name;
-
-    @Getter @Setter
-    private String description;
+    private String datetime;
 
     @Getter @Setter
     private BigDecimal moneyAmount;
+
+    @Getter @Setter
+    private Long termId;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     @Setter @Getter
     private UserEntity user;
+
+    @ManyToOne
+    @JoinColumn(name = "mcc_code")
+    @Setter @Getter
+    private MccEntity mcc;
+
+    @ManyToOne
+    @JoinColumn(name = "type")
+    @Setter @Getter
+    private TypeEntity type;
 
 }
